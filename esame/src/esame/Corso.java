@@ -34,4 +34,12 @@ public class Corso {
 		return nomeDocente;
 	}
 	
+	public void setCfu(int _cfu) {
+		cfu = _cfu;
+	}
+	
+	public int getCfu() {
+		return cfu;
+	}
+	
 }
