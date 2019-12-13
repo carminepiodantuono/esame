@@ -11,10 +11,10 @@ public class Corso {
 		this.cfu=0;
 	}
 	
-	public Corso(String _corso) {
+	public Corso(String _corso, Docente _docente, int _cfu) {
 		this.nomeCorso= new String(_corso);
-		this.cfu=cfu;
-		nomeDocente=_docente;
+		cfu=_cfu;
+		nomeDocente= _docente;
 	}
 	
 	public String getNomeCorso() {
