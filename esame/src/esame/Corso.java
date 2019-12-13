@@ -31,7 +31,7 @@ public class Corso {
 	}
 	
 	public Docente getDocente() {
-		return nomeDocente;
+		return nomeDocente;;
 	}
 	
 }
