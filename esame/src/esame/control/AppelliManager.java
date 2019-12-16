@@ -12,14 +12,14 @@ public class AppelliManager {
 	
 	public Corso creaCorso(String _corso, Docente _docente, int _cfu) {
 		ArrayList<Appello> appelli = new ArrayList<Appello>();
-		Corso bello = new Corso(_corso, _docente, _cfu, appelli);
+		Corso bello = new Corso(_corso, _docente, _cfu);
 		return bello;
 	}
 	
-	public Appello creaAppello(ArrayList<Data> date, boolean concluso, ArrayList<Studente> studenti, Corso corso) {
-		Appello brutto = new Appello(date, concluso, studenti);
-		corso.addAppello(brutto);
-		return brutto;
+	public Appello creaAppello(ArrayList<Data> date, boolean concluso, Corso corso) {
+		Appello nonbrutto = new Appello(date, concluso);
+		corso.addAppello(nonbrutto);
+		return nonbrutto;
 	}
 	
 	public void prenotaStudente(Studente s, Appello appello) {

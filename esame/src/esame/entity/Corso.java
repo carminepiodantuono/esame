@@ -8,6 +8,8 @@ public class Corso {
 	protected int cfu;
 	protected ArrayList<Appello> appelli;
 	
+	
+	
 	public Corso() {
 		this.nomeCorso="";
 		this.nomeDocente= new Docente();
@@ -15,12 +17,13 @@ public class Corso {
 		this.appelli= new ArrayList<Appello>();
 	}
 	
-	public Corso(String _corso, Docente _docente, int _cfu, ArrayList<Appello> _appelli) {
+	//costruttore senza appelli perchè mi permette di creare il corso senza usufruire dell'appello
+	public Corso(String _corso, Docente _docente, int _cfu) {
 		this.nomeCorso= new String(_corso);
 		cfu=_cfu;
 		nomeDocente= _docente;
-		appelli = _appelli;
 	}
+	
 	
 	public String getNomeCorso() {
 		return nomeCorso;
@@ -47,8 +50,9 @@ public class Corso {
 		return cfu;
 	}
 	
-	public void addAppello(Appello appello) {
-		appelli.add(appello);
+	public void addAppello(Appello a) {
+		System.out.println("si");
+		appelli.add(a);
 	}
 	
 }

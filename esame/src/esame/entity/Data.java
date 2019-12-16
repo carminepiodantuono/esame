@@ -1,20 +1,21 @@
 package esame.entity;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class Data {
-	protected Date data;
+	protected LocalDate data;
 	protected Tipologia tipo;
 	protected Sede luogo;
 	
 	
-	public Data(Date _data, Tipologia _tipo, Sede _luogo) {
-		this.data= new Date();
+	public Data(LocalDate _data, Tipologia _tipo, Sede _luogo) {
+		this.data=_data;
 		luogo=_luogo;
 		tipo=_tipo;
 	}
 	
-	public Date getData() {
+	public LocalDate getData() {
 		return data;
 	}
 	
@@ -25,4 +26,5 @@ public class Data {
 	public Sede getLuogo() {
 		return luogo;
 	}
+	
 }

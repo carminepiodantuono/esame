@@ -13,10 +13,9 @@ public class Appello {
 		studentiPrenotati = new ArrayList<Studente>();
 	}
 	
-	public Appello(ArrayList<Data> date, boolean concluso, ArrayList<Studente> _studente) {
+	public Appello(ArrayList<Data> date, boolean concluso) {
 		appelli = date;
 		isConcluso = concluso;
-		studentiPrenotati = _studente;
 	}	
 	
 	public void addStudente(Studente s) {
@@ -43,6 +42,9 @@ public class Appello {
 		isConcluso = _concluso;
 	}
 	
+	public void addData(Data _data) {
+		appelli.add(_data);
+	}
 	
 	
 }
