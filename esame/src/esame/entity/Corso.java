@@ -1,20 +1,25 @@
-package esame;
+package esame.entity;
+
+import java.util.ArrayList;
 
 public class Corso {
 	protected String nomeCorso;
 	protected Docente nomeDocente;
 	protected int cfu;
+	protected ArrayList<Appello> appelli;
 	
 	public Corso() {
 		this.nomeCorso="";
 		this.nomeDocente= new Docente();
 		this.cfu=0;
+		this.appelli= new ArrayList<Appello>();
 	}
 	
-	public Corso(String _corso, Docente _docente, int _cfu) {
+	public Corso(String _corso, Docente _docente, int _cfu, ArrayList<Appello> _appelli) {
 		this.nomeCorso= new String(_corso);
 		cfu=_cfu;
 		nomeDocente= _docente;
+		appelli = _appelli;
 	}
 	
 	public String getNomeCorso() {
@@ -40,6 +45,10 @@ public class Corso {
 	
 	public int getCfu() {
 		return cfu;
+	}
+	
+	public void addAppello(Appello appello) {
+		appelli.add(appello);
 	}
 	
 }

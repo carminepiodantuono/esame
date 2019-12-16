@@ -1,4 +1,4 @@
-package esame;
+package esame.entity;
 public class Studente {
 	protected	String nomeStudente;
 	protected String cognomeStudente;

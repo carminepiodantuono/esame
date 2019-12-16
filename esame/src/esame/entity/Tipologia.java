@@ -1,4 +1,4 @@
-package esame;
+package esame.entity;
 
 public enum Tipologia {
 	Scritto,
