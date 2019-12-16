@@ -39,7 +39,7 @@ public class Appello {
 		return isConcluso;
 	}
 	
-	public void setisConcluso(boolean _concluso) {
+	public void setIsConcluso(boolean _concluso) {
 		isConcluso = _concluso;
 	}
 	
