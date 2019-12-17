@@ -21,15 +21,18 @@ public class Main {
 		
 		Corso c = manager.creaCorso("corso1", primo, 3);
 		
-		
+
 		
 		Appello a = manager.creaAppello(dataAppelli, false, c);
+		
+		System.out.println(a);
+		
 		System.out.println("ciao");
 		c.addAppello(a);
 		
 		manager.prenotaStudente(secondo, a);
 		manager.prenotaStudente(terzo, a);
-	//	manager.stampaStudentiPrenotati(appello);
+		manager.stampaStudentiPrenotati(a);
 	}
 
 } 
