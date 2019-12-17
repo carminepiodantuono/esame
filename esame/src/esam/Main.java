@@ -32,7 +32,7 @@ public class Main {
 		
 		manager.prenotaStudente(secondo, a);
 		manager.prenotaStudente(terzo, a);
-		
+		manager.chiudiAppello(a);
 		
 		manager.stampaStudentiPrenotati(a);
 	}

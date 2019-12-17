@@ -45,5 +45,9 @@ public class AppelliManager {
 		}
 	}
 	
+	public void chiudiAppello(Appello appello) {
+		appello.setIsConcluso(true);
+	}
+	
 	
 }
