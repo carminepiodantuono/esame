@@ -1,7 +1,7 @@
 package esame.entity;
 
 import java.time.LocalDate;
-import java.util.*;
+
 
 public class Data {
 	protected LocalDate data;

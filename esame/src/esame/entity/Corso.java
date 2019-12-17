@@ -56,7 +56,6 @@ public class Corso {
 	}
 	
 	public void addAppello(Appello a) {
-		System.out.println("si");
 		appelli.add(a);
 	}
 	

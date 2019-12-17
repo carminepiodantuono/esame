@@ -1,4 +1,4 @@
-package esame.control;
+package esame.test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
+import esame.control.AppelliManager;
 import esame.entity.Appello;
 import esame.entity.Corso;
 import esame.entity.Data;
@@ -98,7 +99,6 @@ class AppelliManagerTest {
 		ArrayList<Data> dataAppelli = new ArrayList<>();
 		
 		Docente primo = new Docente("Primo");
-		Studente primoS = new Studente("Primo", "Studente", "N48", 44);
 		Studente secondo = new Studente("Secondo", "Studente", "N45", 33);
 		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
 		
@@ -123,5 +123,29 @@ class AppelliManagerTest {
 		manager.stampaStudentiPrenotati(a1);
 	}
 
+	@Test
+	void test05StudentePrenotatoDueVoltePerLoStessoAppello() {
+		AppelliManager manager = new AppelliManager();
+		ArrayList<Data> dataAppelli = new ArrayList<>();
+		
+		Docente primo = new Docente("Primo");
+		Studente secondo = new Studente("Primo", "Studente", "N45", 33);
+		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		
+		dataAppelli.add(first); //aggiungo data in array date
+		
+		Corso c = manager.creaCorso("corso1", primo, 3);
+		
 
+		
+		Appello a = manager.creaAppello(dataAppelli, true, c);
+		
+
+		c.addAppello(a);
+		
+		manager.prenotaStudente(secondo, a);
+		manager.prenotaStudente(secondo, a);
+		
+		manager.stampaStudentiPrenotati(a);
+	}
 }
