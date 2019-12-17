@@ -56,6 +56,6 @@ public class Studente {
 	}
 	
 	public String toString() {
-		return "Nome: " +nomeStudente+ " Cognome: "+ cognomeStudente+"Matricola: "+matricola;
+		return "Nome: " +nomeStudente+ " Cognome: "+ cognomeStudente+" Matricola: "+matricola;
 	}
 }

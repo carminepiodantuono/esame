@@ -23,15 +23,17 @@ public class Main {
 		
 
 		
-		Appello a = manager.creaAppello(dataAppelli, false, c);
+		Appello a = manager.creaAppello(dataAppelli, true, c);
 		
 		System.out.println(a);
 		
-		System.out.println("ciao");
+
 		c.addAppello(a);
 		
 		manager.prenotaStudente(secondo, a);
 		manager.prenotaStudente(terzo, a);
+		
+		
 		manager.stampaStudentiPrenotati(a);
 	}
 
