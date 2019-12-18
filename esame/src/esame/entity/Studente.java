@@ -12,6 +12,7 @@ public class Studente {
 		this.pin=0;
 	}
 	
+	//costruttore
 	public Studente(String _nomeStudente, String _cognomeStudente, String _matricola, int _pin) {
 		this.nomeStudente= new String(_nomeStudente);
 		this.cognomeStudente= new String(_cognomeStudente);
@@ -55,6 +56,7 @@ public class Studente {
 		return matricola;
 	}
 	
+	//stampa il nome, il cognome e la matricola degli studenti
 	public String toString() {
 		return "Nome: " +nomeStudente+ " Cognome: "+ cognomeStudente+" Matricola: "+matricola;
 	}

@@ -4,15 +4,17 @@ import java.util.*;
 public class Appello {
 	
 	ArrayList<Data> appelli;
-	public boolean isClosed;
+	boolean isClosed;
 	ArrayList<Studente> studentiPrenotati;
 	
+	//costruttore vuoto
 	public Appello() {
 		appelli = new ArrayList<Data>();
 		isClosed = false;
 		studentiPrenotati = new ArrayList<Studente>();
 	}
 	
+	//costruttore
 	public Appello(ArrayList<Data> date, boolean concluso) {
 		appelli = date;
 		isClosed = concluso;
@@ -47,6 +49,8 @@ public class Appello {
 		appelli.add(_data);
 	}
 	
+	
+	//effettua un ciclo if per verificare lo stato dell'appello e poi stampa
 	public String toString() {
 		StringBuffer buff = new StringBuffer();
 		if(isClosed==true) {

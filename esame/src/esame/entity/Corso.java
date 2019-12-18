@@ -17,7 +17,7 @@ public class Corso {
 		this.appelli = new ArrayList<Appello>();
 	}
 	
-	//costruttore senza appelli perchè mi permette di creare il corso senza usufruire dell'appello
+	//costruttore
 	public Corso(String _corso, Docente _docente, int _cfu) {
 		nomeCorso = _corso;
 		cfu=_cfu;
@@ -55,6 +55,8 @@ public class Corso {
 		appelli = _appelli;
 	}
 	
+	
+	//aggiunge un appello all'array di appelli
 	public void addAppello(Appello a) {
 		appelli.add(a);
 	}

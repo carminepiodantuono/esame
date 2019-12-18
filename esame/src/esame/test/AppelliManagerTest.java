@@ -209,13 +209,11 @@ class AppelliManagerTest {
 
 		
 		Corso c = manager.creaCorso("corso1", primo, 3);
-		Corso c1 = manager.creaCorso("corso2", primo, 9);
 
 		
 		Appello a = manager.creaAppello(manager.listaDate(), false, c);
 		
 		c.addAppello(a);
-		c1.addAppello(a);
 
 	
 		
@@ -223,5 +221,33 @@ class AppelliManagerTest {
 		
 		manager.stampaStudentiPrenotati(a);
 	}
+	
+	@Test
+	void test09DueStudentiCercanoDiPrenotarsiAdUnAppelloChiuso() throws Exception {
+		AppelliManager manager = new AppelliManager();
+		
+		Docente primo = new Docente("Primo");
+		Studente secondo = new Studente("Primo", "Studente", "N45", 33);
+		Studente terzo = new Studente("Secondo", "Studente", "N66", 69);
+		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		
+		manager.aggiungiiData(first);
+		Corso c = manager.creaCorso("corso1", primo, 3);
+		
+
+		
+		Appello a = manager.creaAppello(manager.listaDate(), false, c);
+		
+		c.addAppello(a);
+		manager.chiudiAppello(a);
+
+	
+		manager.prenotaStudente(terzo, a);
+		manager.prenotaStudente(secondo, a);
+		
+		manager.stampaStudentiPrenotati(a);
+	}
+	
+	
 }
 

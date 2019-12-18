@@ -3,11 +3,13 @@ package esame.entity;
 public class Docente {
 	protected String nomeDocente;
 	
+	//costruttore vuoto
 	public Docente() {
 		this.nomeDocente="";
 		
 	}
 	
+	//costruttore
 	public Docente(String _docente) {
 		this.nomeDocente= new String(_docente);
 	}

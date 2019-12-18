@@ -8,7 +8,7 @@ public class Data {
 	protected Tipologia tipo;
 	protected Sede luogo;
 	
-	
+	//costruttore
 	public Data(LocalDate _data, Tipologia _tipo, Sede _luogo) {
 		this.data=_data;
 		luogo=_luogo;
