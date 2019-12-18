@@ -33,7 +33,7 @@ class AppelliManagerTest {
 		
 
 		
-		Appello a = manager.creaAppello(dataAppelli, true, c);
+		Appello a = manager.creaAppello(dataAppelli, false, c);
 		
 
 		c.addAppello(a);
@@ -59,7 +59,7 @@ class AppelliManagerTest {
 		
 
 		
-		Appello a = manager.creaAppello(dataAppelli, true, c);
+		Appello a = manager.creaAppello(dataAppelli, false, c);
 		
 
 		c.addAppello(a);
@@ -108,8 +108,8 @@ class AppelliManagerTest {
 		
 
 		
-		Appello a = manager.creaAppello(dataAppelli, true, c);
-		Appello a1 = manager.creaAppello(dataAppelli, true, c);
+		Appello a = manager.creaAppello(dataAppelli, false, c);
+		Appello a1 = manager.creaAppello(dataAppelli, false, c);
 		
 
 		c.addAppello(a);
@@ -138,12 +138,39 @@ class AppelliManagerTest {
 		
 
 		
-		Appello a = manager.creaAppello(dataAppelli, true, c);
+		Appello a = manager.creaAppello(dataAppelli, false, c);
 		
 
 		c.addAppello(a);
 		
 		manager.prenotaStudente(secondo, a);
+		manager.prenotaStudente(secondo, a);
+		
+		manager.stampaStudentiPrenotati(a);
+	}
+	
+	@Test
+	void test06StudenteCercaDiPrenotarsiAdUnAppelloChiuso() {
+		AppelliManager manager = new AppelliManager();
+		ArrayList<Data> dataAppelli = new ArrayList<>();
+		
+		Docente primo = new Docente("Primo");
+		Studente secondo = new Studente("Primo", "Studente", "N45", 33);
+		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		
+		dataAppelli.add(first); //aggiungo data in array date
+		
+		Corso c = manager.creaCorso("corso1", primo, 3);
+		
+
+		
+		Appello a = manager.creaAppello(dataAppelli, false, c);
+		
+		c.addAppello(a);
+		manager.chiudiAppello(a);
+
+	
+		
 		manager.prenotaStudente(secondo, a);
 		
 		manager.stampaStudentiPrenotati(a);

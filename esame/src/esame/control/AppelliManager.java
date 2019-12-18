@@ -13,6 +13,7 @@ public class AppelliManager {
 	}
 	
 	public Corso creaCorso(String _corso, Docente _docente, int _cfu) {
+	
 		Corso cor = new Corso(_corso, _docente, _cfu);
 		return cor;
 	}
@@ -33,12 +34,13 @@ public class AppelliManager {
 	
 	
 	public void prenotaStudente(Studente s, Appello appello) {
-		if(!appello.getStudenti().contains(s)) {
+		if(appello.getIsClosed()==true) {
+			System.out.println("L'appello è stato chiuso, non è possibile prenotarsi!");
+		}else if(!appello.getStudenti().contains(s)) {
 			appello.addStudente(s);
 		}else {
-			System.out.println("Prenotazione goà avvenuta, non è possibile  prenotarsi due volte per lo styesso appello!");
+			System.out.println("Prenotazione già avvenuta, non è possibile  prenotarsi due volte per lo stesso appello!");
 		}
-		
 	}
 	
 	public void stampaStudentiPrenotati(Appello appello) {
@@ -50,7 +52,7 @@ public class AppelliManager {
 	}
 	
 	public void chiudiAppello(Appello appello) {
-		appello.setIsConcluso(true);
+		appello.setIsClosed(true);
 	}
 	
 	

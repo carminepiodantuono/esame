@@ -4,18 +4,18 @@ import java.util.*;
 public class Appello {
 	
 	ArrayList<Data> appelli;
-	boolean isConcluso;
+	public boolean isClosed;
 	ArrayList<Studente> studentiPrenotati;
 	
 	public Appello() {
 		appelli = new ArrayList<Data>();
-		isConcluso = false;
+		isClosed = false;
 		studentiPrenotati = new ArrayList<Studente>();
 	}
 	
 	public Appello(ArrayList<Data> date, boolean concluso) {
 		appelli = date;
-		isConcluso = concluso;
+		isClosed = concluso;
 		studentiPrenotati = new ArrayList<Studente>();
 	}	
 	
@@ -35,12 +35,12 @@ public class Appello {
 		appelli = _appelli;
 	}
 	
-	public boolean getIsConcluso() {
-		return isConcluso;
+	public boolean getIsClosed() {
+		return isClosed;
 	}
 	
-	public void setIsConcluso(boolean _concluso) {
-		isConcluso = _concluso;
+	public void setIsClosed(boolean _concluso) {
+		isClosed = _concluso;
 	}
 	
 	public void addData(Data _data) {
@@ -49,7 +49,7 @@ public class Appello {
 	
 	public String toString() {
 		StringBuffer buff = new StringBuffer();
-		if(isConcluso==true) {
+		if(isClosed==true) {
 			buff.append("Stato appello: CHIUSO");
 		} else {
 			buff.append("Stato appello: APERTO");
