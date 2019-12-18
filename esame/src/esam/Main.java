@@ -36,7 +36,6 @@ public class Main {
 		
 		manager.stampaStudentiPrenotati(a);
 	}
-	
 
 } 
 

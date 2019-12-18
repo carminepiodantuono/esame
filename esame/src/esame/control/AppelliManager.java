@@ -22,7 +22,6 @@ public class AppelliManager {
 		return cor;
 	}
 	
-	
 	//crea un appello con data, stato dell'appello e il nome del corso creato in precedenza
 	public Appello creaAppello(ArrayList<Data> date, boolean concluso, Corso corso) {
 		Appello app = new Appello(date, concluso);

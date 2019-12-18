@@ -138,7 +138,6 @@ class AppelliManagerTest {
 
 		c.addAppello(a);
 		
-		
 		manager.prenotaStudente(secondo, a);
 		manager.prenotaStudente(secondo, a);
 		

@@ -34,7 +34,7 @@ public class Appello {
 	}
 	
 	public void setAppello(ArrayList<Data> _appelli) {
-		appelli = _appelli;	
+		appelli = _appelli;
 	}
 	
 	public boolean getIsClosed() {

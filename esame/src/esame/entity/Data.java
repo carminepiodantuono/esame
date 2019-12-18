@@ -15,7 +15,6 @@ public class Data {
 		tipo=_tipo;
 	}
 	
-	
 	public LocalDate getData() {
 		return data;
 	}
