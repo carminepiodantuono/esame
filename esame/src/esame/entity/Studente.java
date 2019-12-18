@@ -29,6 +29,7 @@ public class Studente {
 		return nomeStudente;
 	}
 	
+	
 	public void setCognomeStudente(String _cognomeStudente) {
 		cognomeStudente = _cognomeStudente;
 	}

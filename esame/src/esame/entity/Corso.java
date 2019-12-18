@@ -59,6 +59,7 @@ public class Corso {
 	//aggiunge un appello all'array di appelli
 	public void addAppello(Appello a) {
 		appelli.add(a);
+	
 	}
 	
 }

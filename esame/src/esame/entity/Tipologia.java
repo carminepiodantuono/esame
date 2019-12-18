@@ -6,3 +6,4 @@ public enum Tipologia {
 	Orale,
 	Calcolatore
 }
+

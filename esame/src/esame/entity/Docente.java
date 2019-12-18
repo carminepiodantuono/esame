@@ -14,6 +14,7 @@ public class Docente {
 		this.nomeDocente= new String(_docente);
 	}
 	
+	
 	public String getNomeDocente() {
 		return nomeDocente;
 	}
