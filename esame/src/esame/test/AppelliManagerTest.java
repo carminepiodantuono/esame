@@ -194,15 +194,17 @@ class AppelliManagerTest {
 	}
 	
 	@Test
-	void test08AppelloPerDueCorsiDiversi() throws Exception {
+	void test08APiùDatePerLoStessoAppello() throws Exception {
 		AppelliManager manager = new AppelliManager();
 		
 		
 		Docente primo = new Docente("Primo");
 		Studente secondo = new Studente("Primo", "Studente", "N45", 33);
 		Data first = new Data(LocalDate.of(2016, 1, 1), Tipologia.Calcolatore, Sede.Aula);
+		Data second = new Data(LocalDate.of(2016, 2, 1), Tipologia.Orale, Sede.Laboratorio);
 		
 		manager.aggiungiiData(first); //aggiungo data in array date
+		manager.aggiungiiData(second); //aggiungo data in array date
 		
 
 		
